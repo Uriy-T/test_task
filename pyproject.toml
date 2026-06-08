@@ -6,7 +6,7 @@ authors = [
     {name = "Uriy-T",email = "briner_asterios@mail.ru"}
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13.12"
 dependencies = [
     "playwright (>=1.60.0,<2.0.0)",
     "pytest (>=9.0.3,<10.0.0)",
