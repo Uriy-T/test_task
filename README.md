@@ -64,8 +64,7 @@ pydantic-settings - Управление настройками из .env и п�
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/your-username/your-project-name.git
-cd your-project-name
+git clone https://github.com/Uriy-T/test_task.git
 ```
 
 ### 2. Установка Poetry (если не установлен)
@@ -76,11 +75,14 @@ pip install poetry
 
 ### 3. Установка зависимостей
 
+Проследите, чтобы у вас использовался интерпретатор не ниже указанной версии и чтобы он использовал poetry.
+В этом случае, при открытии проекта в PyCharm Poetry самостоятельно установит все необходимые зависимости из toml файла.
+Если этого не произошло, попробуйте выполнить команду:
 ```bash
 poetry install
 ```
 
-### 4. Установка браузеров Playwright
+### 4. Установка браузеров Playwright (если не установлены)
 
 ```bash
 poetry run playwright install
