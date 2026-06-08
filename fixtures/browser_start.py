@@ -17,16 +17,16 @@ def start_browser(playwright: Playwright,
     """
     browser = playwright[browser_type].launch(headless=settings.headless, args=['--start-maximized'])
     context = browser.new_context(no_viewport=True,
-                                  record_video_dir='./videos',
+                                  record_video_dir=settings.videos_dir,
                                   record_video_size={"width": 1920, "height": 1080})
     context.tracing.start(screenshots=True, snapshots=True, sources=True)
     page = context.new_page()
     yield page
 
-    context.tracing.stop(path=f'./tracing/{test_name}.zip')
+    context.tracing.stop(path=settings.tracing_dir.joinpath(f'{test_name}.zip'))
     browser.close()
 
-    allure.attach.file(source=f'./tracing/{test_name}.zip', name='trace', extension='zip')
+    allure.attach.file(settings.tracing_dir.joinpath(f'{test_name}.zip', name='trace', extension='zip'))
     allure.attach.file(source=page.video.path(), name='video', attachment_type=allure.attachment_type.WEBM)
 
 
