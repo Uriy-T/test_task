@@ -1,0 +1,24 @@
+[project]
+name = "test-task"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Uriy-T",email = "briner_asterios@mail.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright (>=1.60.0,<2.0.0)",
+    "pytest (>=9.0.3,<10.0.0)",
+    "pytest-playwright (>=0.8.0,<0.9.0)",
+    "pytest-rerunfailures (>=16.3,<17.0)",
+    "allure-pytest (>=2.16.0,<3.0.0)",
+    "pytest-xdist (>=3.8.0,<4.0.0)",
+    "pydantic (>=2.13.4,<3.0.0)",
+    "pydantic-settings (>=2.14.1,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
